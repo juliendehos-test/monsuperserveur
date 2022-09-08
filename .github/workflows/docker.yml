@@ -28,7 +28,7 @@ jobs:
 
       - name: Push image
         run: |
-          docker load < result
+          docker load -i result
 
           IMAGE_ID=ghcr.io/${{ github.repository }}:latest
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
