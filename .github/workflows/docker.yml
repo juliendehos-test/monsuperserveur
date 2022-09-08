@@ -1,4 +1,3 @@
-
 name: Create and publish a Docker image
 
 on:
@@ -31,7 +30,7 @@ jobs:
         run: |
           docker load < result
 
-          IMAGE_ID=ghcr.IO/${{ github.repository }}:latest
+          IMAGE_ID=ghcr.io/${{ github.repository }}:latest
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
 
           docker tag monsuperserveur ${IMAGE_ID}
